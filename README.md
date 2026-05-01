@@ -1,96 +1,183 @@
-# # # Crypto Data Platform (CoinGecko)
+# Crypto Market Intelligence Platform (CoinGecko)
 
-I am building a complete end-to-end data platform using the CoinGecko API.
+---
 
-# # Goal
+## Project Overview
 
-My goal is to replicate a real-world data engineering system used in companies.
+I am building an end-to-end data platform using the CoinGecko API to analyze the cryptocurrency market over time.
 
-# # This project allows me to:
+The goal of this project is to transform raw market data into structured, reliable, and actionable insights through a complete data pipeline, similar to what is used in real companies.
 
-automatically collect cryptocurrency market data
-store and historize data over time
-transform raw data into analytical datasets
-automate the full data pipeline
-build dashboards to analyze market trends
-Career Objective
+This platform is inspired by tools like Finary, but focuses on data analysis and market understanding rather than financial advice.
 
-# # This project helps me position myself for roles such as:
+---
 
-Junior Data Engineer
-Analytics Engineer
-Data roles in banking or Big 4 consulting firms
+## Objective
 
-# # # I want to demonstrate that I can design and operate a full data pipeline end-to-end.
+The platform is designed to:
 
-##  System Architecture
+- Collect cryptocurrency market data automatically  
+- Store and historize data over time  
+- Transform raw data into analytical models  
+- Build machine learning models for market behavior analysis  
+- Automate the entire data pipeline  
+- Generate data-driven insights on market trends and performance  
 
-CoinGecko API
-↓
-Dataiku (workflow orchestration and scheduling)
-↓
-Python (data ingestion layer)
-↓
-DuckDB (raw data storage)
-↓
-dbt (data transformation layer)
-↓
-Power BI (dashboard and visualization layer)
+---
 
-##  Tech Stack
-# 1. Data Source
+## Data Scope
 
-I use the CoinGecko API to collect cryptocurrency market data such as prices, volume, and market capitalization.
+The platform processes cryptocurrency market data such as:
 
-# 2. Orchestration Layer
+- Prices  
+- Market capitalization  
+- Trading volume  
+- Market rankings  
+- Historical price evolution  
 
-I use Dataiku to manage and automate workflows.
+---
 
-It allows me to:
+## System Architecture
 
-schedule pipelines
-automate execution
-monitor pipeline runs
-# 3. Data Ingestion
+CoinGecko API  
+↓  
+Dataiku (workflow orchestration and scheduling)  
+↓  
+Python (data ingestion layer)  
+↓  
+DuckDB (raw data storage and historization)  
+↓  
+dbt (data transformation layer)  
+↓  
+Machine Learning Layer (feature engineering + models)  
+↓  
+Power BI (analytics and dashboard layer)
 
-I use Python to extract data from the API.
+---
 
-This includes:
+## Tech Stack
 
-API requests
-basic data cleaning
-loading data into storage
-# 4. Storage Layer
+### Data Source
+CoinGecko API for cryptocurrency market data.
 
-I use DuckDB to store raw data and maintain historical records.
+---
 
-# 5. Transformation Layer
+### Orchestration Layer
+Dataiku is used for:
 
-I use dbt to transform data using SQL.
+- Scheduling pipelines  
+- Automating workflows  
+- Monitoring executions  
 
-I build:
+---
 
-staging models for data cleaning
-analytical models (marts)
-business KPIs
-# 6. Visualization Layer
+### Data Ingestion
+Python is used for:
 
-I use Power BI to build dashboards that help analyze:
+- API requests  
+- Data extraction  
+- Basic preprocessing  
+- Loading data into storage  
 
-market trends
-price evolution
-top-performing cryptocurrencies
-volatility patterns
-# 7. Infrastructure (Bonus)
+---
 
-I containerize the entire project using Docker to make it reproducible and production-like.
+### Storage Layer
+DuckDB is used for:
 
-# # Final Outcome
+- Storing raw data  
+- Maintaining historical datasets  
+- Fast analytical queries  
 
-At the end, I have a complete data platform that works like a real company system:
+---
 
-automated data ingestion
-structured data pipeline
-SQL-based transformations
-business dashboards
-What This Demonstrates
+### Transformation Layer
+dbt (data build tool) is used for:
+
+- Data cleaning and standardization  
+- Building analytical models  
+- Creating business-ready datasets  
+
+---
+
+### Machine Learning Layer
+
+This layer adds predictive and analytical intelligence on top of the data pipeline.
+
+It includes:
+
+- Feature engineering (moving averages, volatility, returns)  
+- Supervised learning models (regression / classification)  
+- Time-based analysis of crypto price trends  
+- Clustering of cryptocurrencies based on behavior  
+
+Example use cases:
+
+- Predicting short-term price trends (exploratory, not financial advice)  
+- Classifying assets by risk or volatility level  
+- Grouping cryptocurrencies with similar market behavior  
+
+This layer is implemented using Dataiku AutoML or Python-based ML workflows.
+
+---
+
+### Visualization Layer
+Power BI is used for:
+
+- Market trend analysis  
+- Performance tracking  
+- Volatility insights  
+- Machine learning outputs visualization  
+- Dashboard creation  
+
+---
+
+### Infrastructure (Optional)
+Docker is used for:
+
+- Containerizing the project  
+- Ensuring reproducibility  
+- Running the full pipeline in any environment  
+
+---
+
+## Key Features
+
+- Automated data ingestion from CoinGecko API  
+- Historical data tracking system  
+- Structured data transformation using dbt  
+- Orchestrated workflows with Dataiku  
+- Machine learning layer for market analysis  
+- Business intelligence dashboards with Power BI  
+- Reproducible environment using Docker  
+
+---
+
+## Machine Learning Use Cases
+
+The ML layer is used to generate analytical insights such as:
+
+- Market trend classification  
+- Volatility-based clustering of assets  
+- Short-term price movement estimation (experimental)  
+- Behavioral grouping of cryptocurrencies  
+
+Important:  
+This project does not provide financial advice. It focuses on data analysis and pattern recognition in financial markets.
+
+---
+
+## Final Outcome
+
+This project results in a complete crypto data intelligence system that allows structured analysis of market evolution over time, combining data engineering, analytics, and machine learning.
+
+---
+
+## What This Project Demonstrates
+
+- API integration and data ingestion  
+- End-to-end data pipeline design  
+- SQL-based data modeling with dbt  
+- Workflow orchestration with Dataiku  
+- Machine learning applied to financial data  
+- Business intelligence and visualization  
+- Data engineering best practices  
